@@ -23,7 +23,7 @@
 	<!-- Custom Tumblr Theme Data -->
 	<meta name="color:Background" content="#683b20">
 	<meta name="color:Text" content="#000000">
-	<meta name="color:Links" conten.cleart="#FFFFFF">
+	<meta name="color:Links" content="#FFFFFF">
 	<meta name="font:Body" content="Futura, Georgia, Helvetica, Arial, serif"/>
 	<meta name="image:Background" content="http://static.tumblr.com/h3aw40n/KGtkopm5f/background.jpg" />
 	<meta name="if:Display Twitter Updates" content="1"/>
@@ -41,11 +41,406 @@
 	<meta name="text:Link URL 4" content=""/>
 	<meta name="text:Link Title 5" content=""/>
 	<meta name="text:Link URL 5" content=""/>
-	
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">   
-	
+
 	<!-- Stylesheets -->
 	<style type="text/css">
+	 /* <---- Overall Properties ----> */
+        * {
+        	margin: 0px;
+        	padding: 0px;
+        	-moz-outline-style: none;
+        	outline: none;
+        	}
+        body {
+            background:  {color:Background} url({image:Background}) top left fixed;
+        	font-family: {font:Body};
+        	font-size: 13px; 
+        	color: {color:Text};
+        	}
+        #container {
+        	width: 500px;
+        	margin: 0px auto;
+        	padding: 0px 15px;
+        	}
+        h1, h2, h3, h4, h5, h6 {
+        	font-weight: normal;
+        	}
+        a {
+        	text-decoration: none;
+        	color: {color:Links};
+        	} 
+        a:hover {
+        	text-decoration: underline;
+        	}
+        /* <---- Firefox Image Border Fix ----> */
+        a img, img {
+        	border: none;
+        	}
+        /* <---- Header ----> */
+        #header {
+        	text-transform: uppercase;
+        	margin: 25px 0px 60px 0px;
+        	padding: 0px 0px 2px 0px;
+        	}
+        #header a {
+        	color: {color:Text};
+        	}
+        #header h1 {
+        	margin: 0px 0px 0px -2px;
+        	}
+        #header a:hover {
+        	text-decoration: none;
+        	color: {color:Links};
+        	}
+        /* <---- Top Bar Properties ----> */
+        #upper {
+        	font-size: 1em;
+        	padding: 0px 0px 0px 0px;
+        	border-bottom: 2px {color:Text} solid;
+        	}
+        #upper div {
+        	border-top: 1px {color:Text} dashed;
+        	}
+        #upper #about_container {
+        	border-top: 2px {color:Text} solid;
+        	}
+        /* <---- Main Nav & Extra Links Properties ----> */
+        .nav ol, nav ul {
+        	list-style-position: inside;
+        	padding: 2px 0px 0px 0px;
+        	clear: left;
+        	}
+        .nav ol {
+        	list-style-type: decimal-leading-zero;
+        	}
+        .nav ul {
+        	list-style-type: circle;
+        	}
+        .nav li {
+        	float: left;
+        	margin: 0px 10px 2px 0px;
+        	}
+        /* <---- About Properties ----> */
+        a#about {
+        	cursor: pointer;
+        	}
+        #about_container {
+        	display: none;
+        	font-size: 1em;
+        	text-transform: none;
+        	padding: 10px 0px;
+        	}
+        #about_container a {
+        	color: {color:Links};
+        	}
+        #about_container a:hover {
+        	text-decoration: underline;
+        	}
+        p.avatar {
+        	float: left;
+        	margin: 0px 10px 5px 0px;
+        	}
+        p.avatar img {
+        	width: 90px;
+        	}
+        /* <---- Search Properties ----> */
+        #search {
+        	margin: 0 0 20px 0;
+        	padding: 0 0 15px 0;
+        	text-transform: uppercase;
+        	}
+        #search h2{
+        	font-size: 2em;
+        	text-align: center;
+        	}
+        /* <---- Post Properties ----> */
+        .posts {
+        	margin: 0px 0px 40px 0px;
+        	padding: 0px 0px 40px 0px;
+        	border-bottom: 2px {color:Links} solid;
+        	list-style-type: none;
+        	}
+        .posts:last-child {
+        	border-bottom: none;
+        	}
+        .posts h1, .posts h2, .posts ul, .posts p, .posts p, .posts ol, .player, .posts pre {
+        	margin-bottom: 10px;
+        	}
+        .posts h1 {
+        	font-size: 2.25em;
+        	}
+        .posts h2 {
+        	font-size: 1.5em;
+        	}
+        .posts ol {
+        	list-style-type: decimal-leading-zero;
+        	}
+        .posts ul {
+        	list-style-type: disc;
+        	}
+        .posts ol ul, .posts ul ul {
+        	list-style-type: circle;
+        	}
+        .posts ol ol, .posts ul ol {
+        	list-style-type: decimal;
+        	}
+        .posts ol ul, .posts ol ol, .posts ul ul, .posts ul ol {
+        	margin: 10px 0px 10px 20px;
+        	}
+        .posts ol, .posts ul {
+        	margin: 10px 0px 10px 30px;
+        	}
+        .posts li {
+        	margin-bottom: 5px;
+        	}
+        .caption {
+        	font-size: 14px;
+        	}
+        .posts img, .posts object {
+        	max-width: 500px;
+        	margin: 10px 0px;
+        	}
+        p.object {
+        	text-align: center;
+        	}
+        .posts blockquote {
+        	margin: 10px 0px 10px 15px;
+        	padding-left: 15px;
+        	border-left: 1px {color:Links} dashed;
+        	}
+		.caption img {
+		    max-width: 500px;
+			}
+		
+		.caption blockquote img {
+		    max-width: 150px;
+			}
+        .posts blockquote blockquote {
+        	margin-left: 5px;
+        	}
+        .posts code {
+        	background: #333;
+        	padding: 1px 2px;
+        	color: {color:Links};
+        	font-size: 12px;
+        	}
+        .posts pre {
+        	overflow: auto;
+        	background: #333;
+        	font-size: 12px;
+        	padding: 5px;
+        	color: {color:Links};
+        	margin: 15px 0px;
+        	}
+        .posts pre p {
+        	margin-bottom: 0px;
+        	}
+        /* <---- Quote Post Properties ----> */
+        h1.long {
+        	font-size: 1.5em;
+        	}
+        h1.short:before, h1.medium:before, h1.long:before, h1.short:after, h1.medium:after, h1.long:after {
+        	content: "''";
+        	}
+        /* <---- Link Post Properties ----> */
+        a.link {
+        	padding: 0px 2px;
+        	background: {color:Text};
+        	}
+        /* <---- Audio Post Properties ----> */
+        .extAudio {
+        	width: 90px;
+        	float: right;
+        	clear: right;
+        	text-align: right;
+        	text-transform: uppercase;
+        	font-size: 11px;
+        	}
+        /* <---- Chat Post Properties ----> */
+        .label, .line {
+        	padding: 2px;
+        	float: left;
+        	clear: left;
+        	}
+        .label {
+        	background: {color:Text};
+        	color: {color:Links};
+        	}
+        .line {
+        	background: {color:Links};
+        	color: {color:Text};
+        	}
+        /* <---- Post Info Properties ----> */
+        .post_info {
+        	margin: 25px 0px 0px 0px;
+        	text-align: right;
+        	font-size: 12px;
+        	}
+        /* Tags */
+        .tags a:after {
+        	content: ",";
+        	}
+        .tags a:last-child:after {
+        	content: "";
+        	}
+        /* <---- Page/Post Nav Properties ----> */
+        #post_nav, #perma_nav {
+        	width: 500px;
+        	font-size: 14px;
+        	text-transform: uppercase;
+        	}
+        #perma_nav {
+        	margin: -20px 0px 20px 0px;
+        	}
+        #post_nav {
+        	margin: 0px 0px 70px 0px;
+        	padding: 5px 0px 0px 0px;
+        	}
+        .older {
+        	float: right;
+        	}
+        .newer {
+        	float: left;
+        	margin-right: 10px;
+        	}
+        .pages {
+        	width: 200px;
+        	margin: 0px 150px;
+        	text-align: center;
+        	}
+        /* <---- Notes Properties ----> */
+        #notes ol {
+        	list-style-type: none;
+        	margin: 30px 0px 0px 0px;
+        	font-size: 12px;
+        	}
+        #notes ol li {
+        	padding: 7px 0px;
+        	border-top: 1px {color:Links} dotted;
+        	}
+        #notes ol li:first-child {
+        	border-top: 1px {color:Links} solid;
+        	}
+        #notes ol li img {
+        	display: none;
+        	}
+        /* <---- Footer Properties ----> */
+        #footer {
+        	margin: 0px 0px 150px 0px;
+        	}
+        #footer div {
+        	clear: both;
+        	border-top: 1px {color:Text} dashed;
+        	}
+        #footer div:first-child {
+        	border-top: 2px {color:Text} solid;
+        	}
+        /* <---- Following Properties ----> */
+        .following {
+        	padding: 5px 3px;
+        	}
+        li.follows {
+        	height: 25px;
+        	width: 25px;
+        	list-style-type: none;
+        	float: left;
+        	margin: 2px;
+        	}
+        .following img {
+        	width: 25px;
+        	} 
+        /* <---- Credits Properties ----> */
+        #credits {
+        	text-align: center;
+        	font-size: 12px;
+        	padding: 5px 0px 0px 0px;
+        	clear: left;
+        	}
+        /* <---- Flickr Badge Properties ---->*/
+        #flickr {
+        	padding: 5px 0 0 0;
+        	background: no-repeat 0 5px;
+        	text-indent: 25px;
+        	text-transform: none;
+        	min-height: 15px;
+        	}
+        #flickr #photos {
+        	border: none;
+        	}
+        #largeImage {
+        	position: absolute;
+        	border: 3px solid {color:Links};
+        	}
+        #photos {
+        	margin-left: 16px;
+        	}	
+        #photos img {
+        	float: left;
+        	padding: 0px 0px 5px 10px;
+        	width: 38px;
+        	height: 38px;
+        	} 
+        /* <---- Twitter Badge Properties ----> */
+        #twitter_div {
+        	background: no-repeat 0 6px;
+        	clear: left;
+        	min-height: 27px;
+        	}
+        #twitter_div a {
+        	color: {color:Links};
+        	}
+        #twitter_div a:hover {
+        	text-decoration: underline;
+        	}
+        #tweets {
+        	list-style-type: none;
+        	font-size: 13px;
+        	padding: 5px 0px;
+        	margin: 0 0 0 25px;
+        	text-transform: none;
+        	}
+        /* <---- Custom Links Properties ----> */
+        .links {
+        	padding: 2px 0px 0px 0px;
+        	}
+        .links ol, .links ul {
+        	list-style-position: inside;
+        	clear: left;
+        	}
+        .links ol {
+        	list-style-type: decimal-leading-zero;
+        	}
+        .links ul {
+        	list-style-type: circle;
+        	}
+        .links li {
+        	text-transform: uppercase;
+        	float: left;
+        	margin: 0px 10px 2px 0px;
+        	}
+        /*
+
+        The style below is very important to
+        keeping this theme looking very clean.
+
+        I use this style all over this theme
+        to correct floats, of which there 
+        are a few.
+
+        Unless you know what you are doing,
+        do not mess with this style. This 
+        law is given under penalty of death.
+
+        */
+        div#clearfix, li#clearfix {
+        	clear: both;
+        	list-style-type: none;
+        	border: none;
+        }
+        
+		/* Blog Title Font Size */
+		#header h1 { font-size: 3em; }
+		
 		/* Background Color & Image */
 		body { background:  {color:Background} url('{image:Background}'); }
 		
@@ -54,11 +449,16 @@
 		
 		/* Flickr Icon (16x16) */
 		#flickr { background-image: url(http://static.tumblr.com/h3aw40n/BRMkhqyh4/flickr.png); }
+		
+		.tag:before, .search_query:before { content:'“'; }
+		.tag:after, .search_query:after { content:'”'; }
+		
+		{CustomCSS}
 	</style>
 	
 	<!-- Scripts -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-	<script type="text/javascript" src="scripts/fieldnotes.js"></script>
+	<script type="text/javascript" src="http://static.tumblr.com/h3aw40n/Lhpkmxpx8/functions.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {	
 		//Set this variable (x) to change the initial display
@@ -86,7 +486,9 @@
 
 	<div id="header"> <!--BEGIN header -->
 	
-		<h1><a href="/">{Title}</a></h1>
+		<div id="top">
+			<div id="title"><h1><a href="/">{Title}</a></h1></div>
+		</div>
 		
 		<div id="upper">
 		
@@ -108,7 +510,7 @@
 					</ol>
 				{/block:HasPages}
 				
-				<div class="clear"></div>
+				<div id="clearfix"></div>
 			
 			</div>
 			
@@ -122,7 +524,7 @@
 					{block:IfLinkURL4}<li><a href="{text:Link URL 4}">{text:Link Title 4}</a></li>{/block:IfLinkURL4}
 					{block:IfLinkURL5}<li><a href="{text:Link URL 5}">{text:Link Title 5}</a></li>{/block:IfLinkURL5}
 				</ol>
-				<div class="clear"></div>
+				<div id="clearfix"></div>
 			</div>
 			{/block:IfDisplayCustomLinks}
 			
@@ -139,7 +541,7 @@
 			{block:IfFlickrID}
 			<div id="flickr">
 				<noscript>Sorry, but you can't see my Flickr photos because you have disabled javascript.</noscript>
-				<div class="clear"></div>
+				<div id="clearfix"></div>
 			</div>
 			{/block:IfFlickrID}
 		
@@ -150,7 +552,7 @@
 				<p>{Description}</p>		
 				</div>{/block:Description}
 	
-				<div class="clear"></div>
+				<div id="clearfix"></div>
 			
 			</div>
 	
@@ -173,7 +575,7 @@
 			
 			{block:PreviousPost}<div class="older"><a href="{PreviousPost}">{lang:Older}</a></div>{/block:PreviousPost}
 			
-			<div class="clear"></div>
+			<div id="clearfix"></div>
 		</div>{/block:PermalinkPagination}
 		
 		<ul>
@@ -216,7 +618,7 @@
 							<div class="line">{Line}</div>
 						</div>
 						{/block:Lines}
-						<div class="clear"></div>
+						<div id="clearfix"></div>
 					</div>
 				{/block:Chat}
 				
@@ -271,7 +673,7 @@
 			{block:NextPage}<div class="older"><a href="{NextPage}">{lang:Older}</a></div>{/block:NextPage}
 		
 			<div class="pages">{lang:Page CurrentPage of TotalPages}</div>
-			<div class="clear"></div>
+			<div id="clearfix"></div>
 		</div>
 		{/block:Pagination}
 	
@@ -288,7 +690,7 @@
 				{block:Followed}
 				<li class="follows"><a href="{FollowedURL}" title="{FollowedTitle}"><img alt="{FollowedName}" src="{FollowedPortraitURL-48}" /></a></li>{/block:Followed}
 			</ul>
-			<div class="clear"></div>	
+			<div id="clearfix"></div>	
 		</div>{/block:Following}
 		{/block:IfDisplayFollowing}
 		
@@ -317,7 +719,7 @@ function recent_tweets(data) {
 }
 </script>
 <script type="text/javascript" src="/tweets.js"></script>
-{/block:Twitter}{/block:IfDisplayTwitterUpdates}
+{block:Twitter}{/block:IfDisplayTwitterUpdates}
 
 {block:IfDisqusShortname}
 <script type="text/javascript">
@@ -335,4 +737,4 @@ function recent_tweets(data) {
 //]]>
 </script>
 {/block:IfDisqusShortname}
-</html>
+</html>	
