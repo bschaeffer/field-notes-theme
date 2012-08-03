@@ -6,5 +6,5 @@ This is the repository for the free **Field Notes** theme for Tumblr.
 
 ## License
 
-Getopti is Copyright © 2011 Braden Schaeffer. It is free software, and may be
+Field Notes Theme is Copyright © 2011 Braden Schaeffer. It is free software, and may be
 redistributed under the terms specified in the LICENSE file.
